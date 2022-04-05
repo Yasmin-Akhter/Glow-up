@@ -6,7 +6,7 @@ const NotFound = () => {
         <div>
 
             <div className="image-container">
-                <img src="https://img.freepik.com/free-vector/404-error-page-found-minimalist-dark-concept-error-landing-page-web-page-missing_111925-131.jpg?size=626&ext=jpg" alt="" />
+                <img src="https://www.elegantthemes.com/blog/wp-content/uploads/2020/02/000-404.png" />
             </div>
         </div>
     );

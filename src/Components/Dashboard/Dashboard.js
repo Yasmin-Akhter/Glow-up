@@ -1,5 +1,6 @@
 import React from 'react';
-import { Bar, BarChart, Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import './Dashboard.css'
 
 const Dashboard = () => {
     const data = [
@@ -42,15 +43,46 @@ const Dashboard = () => {
     ];
     return (
         <div>
-            <LineChart width={400} height={300} data={data}>
-                <Line type="monotone" dataKey="sell" stroke="#8884d8" strokeWidth={2} />
-                <XAxis dataKey="month"></XAxis>
-                <YAxis />
-            </LineChart>
+            <div className="chart-container">
+                <div className="lineChart">
+                    <LineChart width={400} height={300} data={data}>
+                        <Line type="monotone" dataKey="sell" stroke="#8884d8" strokeWidth={2} />
+                        <XAxis dataKey="month"></XAxis>
+                        <YAxis />
+                        <Tooltip></Tooltip>
+                    </LineChart>
+                </div>
 
-            <BarChart width={200} height={150} data={data}>
-                <Bar dataKey="sell" fill="#8884d8" />
-            </BarChart>
+                <div className="barCart">
+                    <BarChart width={200} height={150} data={data}>
+                        <Bar dataKey="sell" fill="#8884d8" />
+                        <XAxis dataKey="month" />
+                        <YAxis />
+                        <Tooltip />
+                    </BarChart>
+
+                </div>
+
+                <div className="areaChart">
+                    <AreaChart
+                        width={500}
+                        height={400}
+                        data={data}
+                        margin={{
+                            top: 10,
+                            right: 30,
+                            left: 0,
+                            bottom: 0,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="month" />
+                        <YAxis />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="sell" stroke="#8884d8" fill="#8884d8" />
+                    </AreaChart>
+                </div>
+            </div>
         </div>
     );
 };

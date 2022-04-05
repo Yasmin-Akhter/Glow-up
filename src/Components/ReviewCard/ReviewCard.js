@@ -12,7 +12,7 @@ const ReviewCard = (props) => {
                 <p><StarIcon className='icon'></StarIcon> <StarIcon className='icon'></StarIcon><StarIcon className='icon'></StarIcon><StarIcon className='icon'></StarIcon><StarIcon className='icon'></StarIcon> </p>
 
                 <p>"{about.length > 100 ? about.slice(0 - 100) : about}"</p>
-                <h4>Name:{name}</h4>
+                <h4>{name}</h4>
                 <div className="card-img">
                     <img src={picture} alt="" />
                 </div>
