@@ -2,10 +2,16 @@
 
 
 Live site link https://venerable-pony-73bd54.netlify.app/home
+  
+  About my project:
+  * I have designed a analytical website for cosmetics item
+  * I have added reviews of our respected customers in the review page
+  * In the dashboard I have added two chart
+  * In the blogs I have added some text
 
-## Available Scripts
+<!-- ## Available Scripts 
 
-<!-- In the project directory, you can run:
+ In the project directory, you can run:
 
 ### `npm start`
 
