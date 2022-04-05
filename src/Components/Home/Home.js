@@ -6,7 +6,7 @@ import './Home.css';
 const Home = () => {
     return (
         <div>
-            <div>
+            <div className='title'>
                 <h1><span>G</span>low up </h1>
             </div>
             <div className="header-Container">
