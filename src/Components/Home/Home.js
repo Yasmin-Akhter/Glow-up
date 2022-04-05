@@ -2,11 +2,13 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useReview from '../Hook/UseReview';
+import Review from '../Review/Review';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import './Home.css';
 
 const Home = () => {
     const [reviewCart, setReviewCart] = useReview([]);
+    console.log(reviewCart);
     return (
         <div>
             <div className='title'>
@@ -28,10 +30,11 @@ const Home = () => {
 
             </div>
             <div>
-                <h1>WHAT PEOPLE SAY</h1>
-                {/* <div>
-                    <ReviewCard reviewCart={reviewCart} ></ReviewCard>
-                </div> */}
+
+                <div>
+
+                    <Review></Review>
+                </div>
                 <Link to="/review">
                     <Button variant='danger' className='py-2 my-5'> Load More Reviews</Button>
                 </Link>
