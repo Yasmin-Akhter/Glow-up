@@ -1,0 +1,14 @@
+.card {
+    border: 1px solid gray;
+    border-radius: 20px;
+    height: 300px;
+
+    padding: 10px;
+    padding-top: 20px;
+    box-shadow: 2px 2px 2px rgb(185, 184, 184);
+}
+
+.card .icon {
+    height: 20px;
+    color: orange;
+}

@@ -1,4 +1,13 @@
+.review-title {
+    margin-bottom: 30px;
+}
+
 .reviewCard-Container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 30px;
+
+
+
 }

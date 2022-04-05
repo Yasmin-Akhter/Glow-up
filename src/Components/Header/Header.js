@@ -4,8 +4,6 @@ import './Header.css'
 
 const Header = () => {
     return (
-
-
         <nav>
             <Link to="/home">Home</Link>
             <Link to="/review">Review</Link>

@@ -8,7 +8,10 @@ const Review = () => {
 
     return (
         <div>
-
+            <div className='review-title'>
+                <h1>WHAT PEOPLE SAY</h1>
+                <h4>Real Customers Review</h4>
+            </div>
             <div className="reviewCard-Container">
                 {
                     reviewCart.map(review => <ReviewCard
