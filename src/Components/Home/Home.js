@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useReview from '../Hook/UseReview';
@@ -8,6 +8,8 @@ import './Home.css';
 
 const Home = () => {
     const [reviewCart, setReviewCart] = useReview([]);
+
+
     console.log(reviewCart);
     return (
         <div>
@@ -18,7 +20,7 @@ const Home = () => {
 
                 <div className="details-container">
 
-                    <h2>Makes you more beautiful</h2>
+                    <h2>Makes you more Glowing</h2>
                     <p>The right cosmetic products provide nutrition for skin, <br></br> ensuring it stays hydrated and supple.</p>
                     <Link to="/about">
                         <Button variant='danger'>Details</Button>
@@ -30,11 +32,22 @@ const Home = () => {
 
             </div>
             <div>
-
                 <div>
+                    <h1>WHAT PEOPLE SAY</h1>
+                    <h4>Real Customers Review</h4>
 
-                    <Review></Review>
+                    <div className='homeReviewCard-container'>
+
+                        {
+
+                            reviewCart.slice(0, 3).map(review => <ReviewCard
+                                key={review.id}
+                                review={review}
+                            ></ReviewCard>)
+                        }
+                    </div>
                 </div>
+
                 <Link to="/review">
                     <Button variant='danger' className='py-2 my-5'> Load More Reviews</Button>
                 </Link>

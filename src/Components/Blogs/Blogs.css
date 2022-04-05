@@ -1,0 +1,10 @@
+.text-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+.text-content h4 {
+    margin-top: 20px;
+    color: crimson;
+}
